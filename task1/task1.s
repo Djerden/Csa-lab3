@@ -19,8 +19,9 @@ _start:
 loop:
     load_ind     input_addr                  ; acc = mem[input_addr]
     beqz         end                         ; если 0 (конец потока), переходим к завершению программы
+    
     store_addr   temp
-    add          sum_low                     ; Добавляем к аккумулятору значение sum_low
+    add          sum_low                     ; Добавляем к аккумулятору значение sum_low, тут выставляются флаги C, V
     store_addr   sum_low                     
 
     load_addr    temp
