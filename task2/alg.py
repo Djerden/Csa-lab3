@@ -19,5 +19,8 @@ def capital_case_pstr(s):
         return [overflow_error_value], rest
     return line.title(), rest
 
-print(capital_case_pstr('hello world!\n'))
+assert capital_case_pstr('hello world\n') == ('Hello World', '')
+# and mem[0..31]: 0b 48 65 6c 6c 6f 20 57 6f 72 6c 64 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f
+assert capital_case_pstr('python programming\n') == ('Python Programming', '')
+# and mem[0..31]: 12 50 79 74 68 6f 6e 20 50 72 6f 67 72 61 6d 6d 69 6e 67 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f 5f
 
